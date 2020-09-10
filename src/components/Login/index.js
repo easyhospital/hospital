@@ -41,7 +41,6 @@ const Login = () => {
 
 	return (
 		<div className='login'>
-			{/* <div> */}
 			<div className='col-xl-4 col-md-6 col-11 login-content'>
 				<h2>HOSPITAL DIVINA PROVIDENCIA</h2>
 				<div className='card-login'>
@@ -92,9 +91,6 @@ const Login = () => {
 							</div>
 							{error && <p className='error'>{error} </p>}
 							<div className='form-group'>
-								{/* <div className="float-right">
-                        <Link href="/forgot-password"><a className="text-muted"><i className="lni-lock"></i> Olvidaste tu password?</a></Link>
-                        </div> */}
 								<div className='float-right'>
 									<Link href='/signup'>
 										<a className='text-muted'>
@@ -107,7 +103,6 @@ const Login = () => {
 					</div>
 				</div>
 			</div>
-			{/* </div> */}
 		</div>
 	);
 };
