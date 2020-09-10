@@ -1,0 +1,124 @@
+.login,
+.signin {
+	width: 100%;
+	position: relative;
+	background-color: $backgroundContent;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.login-content,
+.signin-content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	max-width: 73rem;
+	margin: auto;
+
+	& h2 {
+		color: $colorPrimary;
+		letter-spacing: 3px;
+		margin-top: -5rem;
+		margin-bottom: 1rem;
+		width: 100%;
+		@media only screen and (min-width: 125rem) {
+			width: 80%;
+		}
+	}
+}
+
+.login-content {
+	h2 {
+		margin-top: -7rem;
+	}
+}
+
+.card-login,
+.card-signin {
+	border-radius: 3rem;
+	border: 1px solid transparent;
+	background-color: #dde5ee;
+	height: 31rem;
+	width: 100%;
+	@media only screen and (min-width: 125rem) {
+		max-width: 70%;
+	}
+
+	& h4 {
+		letter-spacing: 3px;
+		color: #263648;
+		font-weight: 400;
+		font-family: Arial, Helvetica, sans-serif;
+		padding-top: 2rem;
+	}
+}
+.card-signin {
+	height: 42rem;
+}
+
+.form-horizontal {
+	margin: 2rem 0;
+}
+.form-group {
+	width: 85%;
+	margin: 2rem auto;
+}
+.form-control {
+	font-size: $bodyFontSize-xsm;
+	background-color: #dde5ee;
+	border: none;
+	border-bottom: 1px solid black;
+
+	&:focus-within {
+		background-color: white !important;
+	}
+}
+.text-muted {
+	font-size: 1.4rem;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+.btn-showPassword {
+	width: 35px;
+	background-color: #dde5ee;
+	font-size: 1.4rem;
+	border: none;
+	outline: none;
+	&:link,
+	&:visited {
+		outline: none;
+	}
+}
+.btn-login,
+.btn-signin {
+	width: 14rem;
+	height: 4rem;
+	background-color: #00bd9c;
+	color: white;
+	border: 1px solid $colorSecondary;
+	margin-top: 2rem;
+
+	&,
+	&:link,
+	&:visited {
+		text-decoration: none;
+		display: inline-block;
+		border-radius: 3rem;
+		transition: all 0.2s;
+		position: relative;
+		font-size: $bodyFontSize-xsm;
+		font-weight: 600;
+		cursor: pointer;
+		outline: none !important;
+	}
+	&:hover {
+		transform: scale(1.03);
+	}
+}

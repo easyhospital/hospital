@@ -1,0 +1,40 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		text-decoration: none;
+		padding: 0.5rem 3rem;
+		display: inline-block;
+		border-radius: 3rem;
+		transition: all 0.2s;
+		position: relative;
+		font-size: $bodyFontSize-xsm;
+		font-weight: 600;
+
+		//Change for the <button> element
+		cursor: pointer;
+		outline: none !important;
+	}
+
+	&:active,
+	&:focus {
+		transform: translateY(-1px);
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+		outline: none !important;
+		color: $colorPrimary;
+		background-color: white;
+	}
+
+	&-searchnav {
+		background-color: white;
+		color: $colorSecondary;
+		border: 1px solid $colorSecondary;
+
+		&:hover {
+			outline: none !important;
+			color: $colorPrimary;
+			background-color: white;
+			border: 1px solid $colorPrimary;
+		}
+	}
+}

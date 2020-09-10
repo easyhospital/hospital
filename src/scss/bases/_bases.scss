@@ -1,0 +1,224 @@
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+	@if $breakpoint == sm-phone {
+		@media only screen and (max-width: 26.25em) {
+			@content;
+		} //420px
+	}
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		} //600px
+	}
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		} //900px
+	}
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 75em) {
+			@content;
+		} //1200px
+	}
+	@if $breakpoint == laptop {
+		@media only screen and (max-width: 112.4em) {
+			@content;
+		} //1800px
+	}
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 112.5em) {
+			@content;
+		} // >1800
+	}
+}
+
+// COLORS
+$colorPrimary: #2f4358;
+
+$colorSecondary: #1abc9c;
+
+$colorBody: rgba(0, 0, 0, 0.8);
+
+$colorIcons: grey;
+
+$colorBgHover: white;
+
+$colorGrey: rgba(238, 238, 238, 0.8);
+
+$backgroundColor: white;
+
+$backgroundContent: #f2f4f7;
+
+// FONT
+$h1FontSize: 3.5rem;
+$h2FontSize: 3.2rem;
+$h3FontSize: 2.8rem;
+$h4FontSize: 2.3rem;
+$h5FontSize: 2rem;
+$h6FontSize: 1.8rem;
+$bodyFontSize: 2rem;
+$bodyFontSize-sm: 1.8rem;
+$bodyFontSize-xsm: 1.6rem;
+$navFontSize: 1.4rem;
+$iconFontSize: 1.4rem;
+$headingFontFamily: "Lato", sans-serif;
+$bodyFontFamily: "Roboto", sans-serif;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	@include respond(laptop) {
+		// width < 1800?
+		font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+	}
+
+	@include respond(tab-land) {
+		// width < 1200?
+		font-size: 59.37%; //1 rem = 9.5px, 9.5/16 = 59.37%
+	}
+
+	@include respond(tab-port) {
+		// width < 900?
+		font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+	}
+
+	@include respond(phone) {
+		// width < 600?
+		font-size: 50%; //1 rem = 8px, 8/16 = 50%
+	}
+
+	@include respond(sm-phone) {
+		// width < 420?
+		font-size: 43.75%; //1 rem = 7px, 7/16 = 43.75%
+	}
+
+	@include respond(big-desktop) {
+		// width > 1800
+		font-size: 65.62%; //1rem = 10.5px, 10.5px/16px = 65.62%
+	}
+}
+
+body {
+	box-sizing: border-box;
+	font-family: $bodyFontFamily;
+	font-weight: 400;
+	font-size: $bodyFontSize-xsm;
+	line-height: 1.7;
+	color: $colorBody;
+}
+
+.containerFluid {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	margin: 0 !important;
+	position: fixed;
+	background-color: white;
+	z-index: 99;
+}
+
+.sectionPaddingBottom {
+	@include respond(sm-phone) {
+		padding-bottom: 2rem;
+	}
+	@include respond(phone) {
+		padding-bottom: 3rem;
+	}
+	@include respond(tab-port) {
+		padding-bottom: 4rem;
+	}
+	@include respond(tab-land) {
+		padding-bottom: 5rem;
+	}
+	@include respond(laptop) {
+		padding-bottom: 6rem;
+	}
+	@include respond(big-desktop) {
+		padding-bottom: 10rem;
+	}
+}
+.sectionPaddingTop {
+	@include respond(sm-phone) {
+		padding-top: 2rem;
+	}
+	@include respond(phone) {
+		padding-top: 3rem;
+	}
+	@include respond(tab-port) {
+		padding-top: 4rem;
+	}
+	@include respond(tab-land) {
+		padding-top: 5rem;
+	}
+	@include respond(laptop) {
+		padding-top: 6rem;
+	}
+	@include respond(big-desktop) {
+		padding-top: 10rem;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $headingFontFamily;
+}
+
+h1 {
+	font-size: $h1FontSize;
+}
+h2 {
+	font-size: $h2FontSize;
+}
+h3 {
+	font-size: $h3FontSize;
+}
+h4 {
+	font-size: $h4FontSize;
+}
+h5 {
+	font-size: $h5FontSize;
+}
+h6 {
+	font-size: $h6FontSize;
+}
+p {
+	font-size: $bodyFontSize-sm;
+}
+
+.p-route {
+	font-size: 1.3rem;
+	margin-bottom: 2rem;
+}
+
+.form-inline {
+	flex-flow: row nowrap;
+}
+.form-inline .form-control {
+	border-radius: 10px;
+}

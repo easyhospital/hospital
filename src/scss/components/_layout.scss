@@ -1,0 +1,43 @@
+.container {
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    max-width: 1630px;
+  }
+}
+
+.container__wrap {
+  padding-left: 0rem;
+  padding-top: 9rem;
+  min-height: 100vh;
+  transition: padding-left 0.3s;
+  background-color: $backgroundContent;
+
+  @media screen and (min-width: 37.5em) {
+    padding-left: 26rem;
+  }
+}
+
+.layout {
+
+  &.layout--collapse {
+
+    & + .container__wrap {
+      padding-left: 0rem;
+
+      @media screen and (min-width: 576px) {
+        padding-left: 5.5rem;
+      }
+    }
+  }
+
+  &.layout--top-navigation{
+
+    & + .container__wrap{
+
+      @media screen and (min-width: 576px) {
+        padding-left: 0;
+      }
+    }
+  }
+}
