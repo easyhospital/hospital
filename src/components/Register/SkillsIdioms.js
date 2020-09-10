@@ -123,7 +123,7 @@ const SkillsIdioms = ({
 
 	return (
 		<>
-			<div className='language-form'>
+			<div className='skill-form'>
 				<h4>Habilidades</h4>
 				<div className='row'>
 					<div className='col-lg-6 col-12'>
