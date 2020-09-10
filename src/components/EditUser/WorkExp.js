@@ -164,7 +164,7 @@ const WorkExp = ({
 
 	return (
 		<>
-			<div className='workexp-form'>
+			<div className='workexp-form bg-white'>
 				<h4>Experiencia Profesional</h4>
 				<div className='row'>
 					<div className='col-lg-6 col-12'>
@@ -240,21 +240,6 @@ const WorkExp = ({
 								value={achievementContent}
 								onChange={handleAchievementChange}
 							/>
-
-							{errorAchievement && (
-								<Error
-									className='error'
-									mensaje={"Favor de agregar información en el campo de Logros"}
-								/>
-							)}
-							{error && (
-								<Error
-									className='error'
-									mensaje={
-										"Favor de agregar información en todos los campos, ya agregaste tus logros?"
-									}
-								/>
-							)}
 						</div>
 
 						<div className='btn-container'>
@@ -266,6 +251,18 @@ const WorkExp = ({
 								Agregar Expreriencia Profesional
 							</button>
 						</div>
+						{errorAchievement && (
+							<Error
+								mensaje={"Favor de agregar información en el campo de Logros"}
+							/>
+						)}
+						{error && (
+							<Error
+								mensaje={
+									"Favor de agregar información en todos los campos, ya agregaste tus logros?"
+								}
+							/>
+						)}
 					</div>
 
 					<div className='col-lg-6 col-12'>
@@ -285,6 +282,7 @@ const WorkExp = ({
 														? ` a ${expProf.endDate}`
 														: ` - ${expProf.current}`}
 												</p>
+
 												<button
 													onClick={() =>
 														handleDeleteWorkExperience(expProf.workExperienceId)

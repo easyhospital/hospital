@@ -26,14 +26,14 @@ const Submit = ({ userProfile }) => {
 	return (
 		<>
 			<div className='register-submit'>
-				<div>
+				<div className='container-submit'>
 					<div>
 						<h4>Información General</h4>
 						<p>
 							<b>Nombre Completo:</b> {name}
 						</p>
 						<div>
-							<div className='d-flex'>
+							<div className='address-container'>
 								<p className='pr-3 pl-0'>
 									<b>Dirección:</b>
 								</p>
@@ -193,7 +193,7 @@ const Submit = ({ userProfile }) => {
 						{skills.length === 0 ? (
 							""
 						) : (
-							<div className='ml-5 d-flex'>
+							<div className='ml-5 skill-container'>
 								<p className='pr-3'>
 									<b>Habilidades:</b>
 								</p>

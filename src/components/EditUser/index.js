@@ -181,7 +181,10 @@ const UserProfileEdit = () => {
 
 	return (
 		<div className='edit-user'>
-			<form onSubmit={handleSubmit} className='edit-user-form'>
+			<form
+				onSubmit={handleSubmit}
+				className={counter == 8 ? "" : "edit-user-form"}
+			>
 				{formComponents(counter)}
 				<div className='edit-profile-register-container-btn'>
 					{counter == "8" && (

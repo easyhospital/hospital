@@ -89,7 +89,7 @@ const PersonalRef = ({
 
 	return (
 		<>
-			<div className='personal-ref-form'>
+			<div className='personal-ref-form bg-white'>
 				<h4>Referencias Personales</h4>
 
 				<div className='row'>

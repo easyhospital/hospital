@@ -89,7 +89,7 @@ const LaborRef = ({
 	};
 	return (
 		<>
-			<div className='workRef-form'>
+			<div className='workRef-form bg-white'>
 				<h4>Referencias Laborales</h4>
 
 				<div className='row'>

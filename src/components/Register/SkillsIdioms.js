@@ -173,7 +173,7 @@ const SkillsIdioms = ({
 					</div>
 				</div>
 			</div>
-			<div className='language-form mt-5'>
+			<div className='language-form mt4'>
 				<h4>Idiomas</h4>
 				<div className='row'>
 					<div className='col-lg-6 col-12'>

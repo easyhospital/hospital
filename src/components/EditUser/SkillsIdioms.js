@@ -123,7 +123,7 @@ const SkillsIdioms = ({
 
 	return (
 		<>
-			<div className='language-form'>
+			<div className='skill-form bg-white'>
 				<h4>Habilidades</h4>
 				<div className='row'>
 					<div className='col-lg-6 col-12'>
@@ -173,7 +173,7 @@ const SkillsIdioms = ({
 					</div>
 				</div>
 			</div>
-			<div className='language-form mt-5'>
+			<div className='language-form mt4 bg-white'>
 				<h4>Idiomas</h4>
 				<div className='row'>
 					<div className='col-lg-6 col-12'>

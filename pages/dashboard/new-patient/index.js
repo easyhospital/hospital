@@ -123,7 +123,7 @@ const NewPatient = (props) => {
 				{!usuario ? (
 					<p>Error de autenticacion del usuario</p>
 				) : (
-					<>
+					<div>
 						<h3 className='title'>Registro de Ingreso Paciente</h3>
 
 						<form
@@ -402,7 +402,7 @@ const NewPatient = (props) => {
 								Guardar
 							</button>
 						</form>
-					</>
+					</div>
 				)}
 			</div>
 		</div>

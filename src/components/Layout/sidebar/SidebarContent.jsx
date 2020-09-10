@@ -32,7 +32,7 @@ const SidebarContent = (props) => {
 			perfilUsuario.userType == "admin" ? (
 				<ul className='sidebar__block'>
 					<SidebarCategory title='Personal' icon='users'>
-						<Link href='#' passHref>
+						<Link href='./employees-list' passHref>
 							<SidebarLink
 								title='Directorio de personal'
 								icon='license'

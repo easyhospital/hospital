@@ -38,7 +38,7 @@ const PatientDetail = ({ patient }) => {
 
 	return (
 		<>
-			<div className='col-12 patient-list'>
+			<div className='col-12 patient-detail'>
 				<p className='col-3 patient-table-content'>
 					{name} {middleName}
 				</p>

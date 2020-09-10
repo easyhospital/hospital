@@ -120,7 +120,7 @@ const Certifications = ({
 
 	return (
 		<>
-			<div className='certification-form'>
+			<div className='certification-form bg-white'>
 				<h4>Certificaciones</h4>
 
 				<div className='row'>

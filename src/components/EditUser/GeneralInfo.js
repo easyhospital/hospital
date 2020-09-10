@@ -21,7 +21,7 @@ const GeneralInfo = ({ userProfile, setUserProfile, handleClickNext }) => {
 	};
 
 	return (
-		<div className='general-info'>
+		<div className='general-info bg-white'>
 			<h4>Información General</h4>
 			<div className='row general-info-form-row'>
 				<div className='col-md-4 col-11 m-auto pb-3'>

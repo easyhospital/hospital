@@ -114,7 +114,7 @@ const Courses = ({
 
 	return (
 		<>
-			<div className='courses-form'>
+			<div className='courses-form bg-white'>
 				<h4>Cursos</h4>
 				<div className='row'>
 					<div className='col-lg-6 col-12'>

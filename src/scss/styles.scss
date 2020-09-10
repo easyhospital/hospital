@@ -15,14 +15,10 @@
 
 @import "./pages/login";
 
-.patient-list {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	align-items: center;
-}
 .employee-list,
-.patient-list {
+.patient-list,
+.patient,
+.new-patient {
 	background-color: white;
 	width: 98%;
 	max-width: 100rem;
@@ -33,6 +29,18 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 }
+.new-patient {
+	height: 88vh;
+	overflow: auto;
+}
+
+.patient-detail {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	padding: 0;
+}
 .patients-table-header,
 .employees-table-header {
 	display: flex;
@@ -42,6 +50,7 @@
 	border-radius: 10rem;
 	align-items: center;
 	min-height: 3rem;
+	padding: 0;
 
 	& h5 {
 		font-size: 1.6rem;
@@ -49,19 +58,14 @@
 		margin: auto;
 	}
 }
-.patient {
-	background-color: white;
-	width: 98%;
-	padding: 2rem;
-	border-radius: 1.5rem;
-	margin: 0 auto;
-}
+
 .patient-container-header {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	max-width: 100rem;
 	margin: 0 auto;
+
 	@media only screen and (min-width: 56.25em) {
 		display: flex;
 		flex-wrap: nowrap;
@@ -74,14 +78,6 @@
 	padding: 3rem 0 1rem;
 	color: $colorSecondary;
 	width: 100%;
-}
-.new-patient {
-	width: 98%;
-	margin: 0 auto;
-	background: white;
-	padding: 2rem;
-	border-radius: 1.5rem;
-	font-size: $bodyFontSize-sm;
 }
 .btn-new-patient-container,
 .btn-new-employee-container {
@@ -158,8 +154,7 @@
 	box-sizing: border-box;
 	border-radius: 1rem;
 }
-.new-patient-btn-save,
-.edit-user-btn-save {
+.new-patient-btn-save {
 	width: 9rem;
 	height: 3.2rem;
 	background-color: white;
@@ -190,10 +185,10 @@
 .register-container-btn {
 	display: flex;
 	justify-content: center;
-	padding-bottom: 4rem;
-}
-.register-container-btn {
 	padding-bottom: 0;
+}
+.edit-profile-register-container-btn {
+	margin: 1rem 0 4rem 0;
 }
 .edit-user,
 .register {
@@ -208,7 +203,9 @@
 	justify-content: center;
 	height: 93vh;
 }
-
+.edit-user {
+	margin: -3rem auto;
+}
 .register-title {
 	text-align: center;
 
@@ -231,7 +228,9 @@
 .register-form {
 	color: $colorPrimary;
 	font-size: $bodyFontSize-sm;
+	height: 66rem;
 }
+
 .general-info,
 .general-info-edit {
 	background-color: rgba(204, 204, 204, 0.2);
@@ -315,7 +314,6 @@
 .edit-user-submit,
 .register-submit {
 	color: black;
-	padding-top: 10vh;
 
 	h4 {
 		color: $colorSecondary;
@@ -325,6 +323,33 @@
 		font-weight: 600;
 		margin: 2rem 0;
 	}
+}
+.register-submit {
+	height: 88vh;
+	justify-content: center;
+	align-items: center;
+
+	background-color: white;
+	width: 98%;
+	max-width: 100rem;
+	padding: 2rem;
+	border-radius: 1.5rem;
+	margin: 0 auto;
+	display: -moz-box;
+	display: flex;
+	-moz-box-orient: vertical;
+	-moz-box-direction: normal;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+.container-submit {
+	height: 75vh;
+	overflow: auto;
+}
+.skill-container,
+.address-container {
+	flex-wrap: wrap;
+	display: flex;
 }
 .user-account {
 	max-width: 100rem;
@@ -346,6 +371,9 @@
 		margin: 2rem 0;
 	}
 }
+.bg-white {
+	background-color: white;
+}
 .certification-form,
 .courses-form,
 .education-form,
@@ -357,7 +385,6 @@
 	width: 100%;
 	margin: 0 auto;
 	height: 66rem;
-	// margin-top: 10vh;
 	background-color: rgba(204, 204, 204, 0.2);
 	border-radius: 1.5rem;
 	padding: 3rem;
@@ -397,7 +424,7 @@
 	height: 28rem;
 }
 .skill-form {
-	height: 20rem;
+	height: 25rem;
 }
 
 .end-date {
@@ -445,12 +472,16 @@
 .mt2 {
 	margin-top: 2.4rem !important;
 }
+.mt4 {
+	margin-top: 4.5rem !important;
+}
 .mt7 {
 	margin-top: 2.5rem !important;
 }
 
 .btn-workexp,
 .register-btn-save,
+.edit-user-btn-save,
 .btn-logro,
 .btn-course,
 .btn-studies,
@@ -478,7 +509,8 @@
 		outline: none !important;
 	}
 }
-.register-btn-save {
+.register-btn-save,
+.edit-user-btn-save {
 	width: 15rem;
 }
 .btn-logro {
@@ -608,9 +640,9 @@
 	}
 }
 .summary-skills {
-	height: 15rem;
-	min-height: 15rem;
-	max-height: 15rem;
+	height: 16rem;
+	min-height: 16rem;
+	max-height: 16rem;
 }
 .summary-period-skills {
 	display: flex;
