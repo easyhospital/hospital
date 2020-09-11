@@ -25,6 +25,7 @@ const UserProfile = (props) => {
 		email: usuario.email,
 		userType: "user",
 		employeeType: "",
+		employeePosition: "",
 		street: "",
 		suburb: "",
 		postalCode: "",
@@ -46,6 +47,7 @@ const UserProfile = (props) => {
 
 	const {
 		employeeType,
+		employeePosition,
 		street,
 		suburb,
 		postalCode,
@@ -79,6 +81,7 @@ const UserProfile = (props) => {
 			email: usuario.email,
 			userType: "user",
 			employeeType: employeeType,
+			employeePosition: employeePosition,
 			street: street,
 			suburb: suburb,
 			postalCode: postalCode,

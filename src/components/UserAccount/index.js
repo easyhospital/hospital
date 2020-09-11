@@ -53,10 +53,26 @@ const UserAccount = (props) => {
 							</div>
 							<div className='d-flex'>
 								<p className='pr-5'>
+									<b>Puesto:</b> {perfilUsuario.employeePosition}
+								</p>
+								<p>
+									<b>Tipo de contratación:</b> {perfilUsuario.employeeType}
+								</p>
+							</div>
+							<div className='d-flex'>
+								<p className='pr-5'>
 									<b>Fecha de nacimiento:</b> {perfilUsuario.birthDate}
 								</p>
 								<p>
 									<b>Estado civil:</b> {perfilUsuario.marriedStatus}
+								</p>
+							</div>
+							<div className='d-flex'>
+								<p className='pr-5'>
+									<b>Puesto:</b> {perfilUsuario.employeePosition}
+								</p>
+								<p>
+									<b>Tipo de contratación:</b> {perfilUsuario.employeeType}
 								</p>
 							</div>
 						</div>

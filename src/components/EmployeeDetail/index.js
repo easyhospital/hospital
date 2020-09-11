@@ -11,6 +11,7 @@ const EmployeeDetail = ({ employee }) => {
 		email,
 		userType,
 		employeeType,
+		employeePosition,
 		street,
 		suburb,
 		postalCode,
@@ -35,7 +36,7 @@ const EmployeeDetail = ({ employee }) => {
 			<div className='col-12 employee-list'>
 				<p className='col-3 employee-table-content'>{name}</p>
 				<p className='col-4 employee-table-content'>{cellphone}</p>
-				<p className='col-3 employee-table-content'>{telephone}</p>
+				<p className='col-3 employee-table-content'>{employeePosition}</p>
 
 				<div className='col-2 text-center'>
 					<button className='btn-table-more'>Ver mas</button>

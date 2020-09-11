@@ -11,8 +11,8 @@ const EmployeesList = () => {
 			<h3 className='title mb-5'>Directorio de empleados registrados</h3>
 			<div className='employees-table-header col-12'>
 				<h5 className='col-3 '>Nombre</h5>
-				<h5 className='col-4'>Apellidos</h5>
-				<h5 className='col-3'>Status</h5>
+				<h5 className='col-4'>Celular</h5>
+				<h5 className='col-3'>Especialidad</h5>
 				<h5 className='col-2'></h5>
 			</div>
 

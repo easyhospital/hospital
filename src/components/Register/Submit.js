@@ -4,6 +4,7 @@ const Submit = ({ userProfile }) => {
 		email,
 		userType,
 		employeeType,
+		employeePosition,
 		street,
 		suburb,
 		postalCode,
@@ -63,6 +64,14 @@ const Submit = ({ userProfile }) => {
 							</p>
 							<p>
 								<b>Estado civil:</b> {marriedStatus}
+							</p>
+						</div>
+						<div className='d-flex'>
+							<p className='pr-5'>
+								<b>Puesto:</b> {employeePosition}
+							</p>
+							<p>
+								<b>Tipo de contratación:</b> {employeeType}
 							</p>
 						</div>
 					</div>
