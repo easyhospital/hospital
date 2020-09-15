@@ -113,7 +113,7 @@ const Education = ({
 
 	return (
 		<>
-			<div className='education-form'>
+			<div className='education-form bg-white'>
 				<h4>Educación</h4>
 				<div className='row'>
 					<div className='col-lg-6 col-12'>

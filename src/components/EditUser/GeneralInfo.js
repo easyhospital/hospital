@@ -2,6 +2,8 @@ import React from "react";
 
 const GeneralInfo = ({ userProfile, setUserProfile, handleClickNext }) => {
 	const {
+		employeeType,
+		employeePosition,
 		street,
 		suburb,
 		postalCode,
@@ -21,7 +23,7 @@ const GeneralInfo = ({ userProfile, setUserProfile, handleClickNext }) => {
 	};
 
 	return (
-		<div className='general-info'>
+		<div className='general-info bg-white'>
 			<h4>Información General</h4>
 			<div className='row general-info-form-row'>
 				<div className='col-md-4 col-11 m-auto pb-3'>
@@ -234,6 +236,35 @@ const GeneralInfo = ({ userProfile, setUserProfile, handleClickNext }) => {
 				</div>
 			</div>
 
+			<div className='row general-info-form-row'>
+				<div className='col-md-6 col-11 m-auto pb-3'>
+					<label htmlFor='employeePosition'>Puesto</label>
+					<input
+						type='text'
+						id='employeePosition'
+						name='employeePosition'
+						placeholder='puesto'
+						value={employeePosition}
+						onChange={handleChange}
+					/>
+				</div>
+				<div className='col-md-6 col-11 m-auto pb-3'>
+					<label htmlFor='marriedStatus' className='w-estadoCivil'>
+						Tipo de contratación
+					</label>
+					<select
+						id='employeeType'
+						className='form-control'
+						name='employeeType'
+						value={employeeType}
+						onChange={handleChange}
+					>
+						<option defaultValue>Selecciona...</option>
+						<option value='interno'>Interno</option>
+						<option value='externo'>Externo</option>
+					</select>
+				</div>
+			</div>
 			<div className='general-info-container-btn-next'>
 				<button
 					type='button'

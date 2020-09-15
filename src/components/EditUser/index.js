@@ -34,7 +34,6 @@ const UserProfileEdit = () => {
 
 		userDB();
 	}, []);
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
@@ -43,11 +42,12 @@ const UserProfileEdit = () => {
 
 	async function updateEmployeeProfile() {
 		const employeeObj = {
-			id: usuario.uid,
+			idEmployee: usuario.uid,
 			name: usuario.displayName,
 			email: usuario.email,
 			userType: userProfile.userType,
 			employeeType: userProfile.employeeType,
+			employeePosition: userProfile.employeePosition,
 			street: userProfile.street,
 			suburb: userProfile.suburb,
 			postalCode: userProfile.postalCode,
@@ -69,7 +69,7 @@ const UserProfileEdit = () => {
 
 		firebase.db
 			.collection("employees")
-			.where("id", "==", userProfile.id)
+			.where("id", "==", userProfile.idEmployee)
 			.get()
 			.then((response) => {
 				response.forEach((doc) => {
@@ -181,7 +181,10 @@ const UserProfileEdit = () => {
 
 	return (
 		<div className='edit-user'>
-			<form onSubmit={handleSubmit} className='edit-user-form'>
+			<form
+				onSubmit={handleSubmit}
+				className={counter == 8 ? "" : "edit-user-form"}
+			>
 				{formComponents(counter)}
 				<div className='edit-profile-register-container-btn'>
 					{counter == "8" && (

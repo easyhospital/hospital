@@ -12,7 +12,7 @@ const EditProfile = (props) => {
 	if (perfilUsuario != null) {
 		console.log(perfilUsuario);
 	}
-
+	console.log(perfilUsuario);
 	try {
 		if (usuario == null) {
 			Router.push("/");
@@ -57,6 +57,14 @@ const EditProfile = (props) => {
 									</p>
 									<p>
 										<b>Estado civil:</b> {perfilUsuario.marriedStatus}
+									</p>
+								</div>
+								<div className='d-flex'>
+									<p className='pr-5'>
+										<b>Puesto:</b> {perfilUsuario.employeePosition}
+									</p>
+									<p>
+										<b>Tipo de contratación:</b> {perfilUsuario.employeeType}
 									</p>
 								</div>
 							</div>

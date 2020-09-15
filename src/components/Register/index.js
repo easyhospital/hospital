@@ -20,11 +20,12 @@ const UserProfile = (props) => {
 	const { changeMobileSidebarVisibility, changeSidebarVisibility } = props;
 
 	const [userProfile, setUserProfile] = useState({
-		id: usuario.uid,
+		idEmployee: usuario.uid,
 		name: usuario.displayName,
 		email: usuario.email,
 		userType: "user",
 		employeeType: "",
+		employeePosition: "",
 		street: "",
 		suburb: "",
 		postalCode: "",
@@ -46,6 +47,7 @@ const UserProfile = (props) => {
 
 	const {
 		employeeType,
+		employeePosition,
 		street,
 		suburb,
 		postalCode,
@@ -74,11 +76,12 @@ const UserProfile = (props) => {
 
 	async function setNewEmployee() {
 		const profile = {
-			id: usuario.uid,
+			idEmployee: usuario.uid,
 			name: usuario.displayName,
 			email: usuario.email,
 			userType: "user",
 			employeeType: employeeType,
+			employeePosition: employeePosition,
 			street: street,
 			suburb: suburb,
 			postalCode: postalCode,
@@ -232,7 +235,10 @@ const UserProfile = (props) => {
 					</div>
 				)}
 
-				<form onSubmit={handleSubmit} className='register-form'>
+				<form
+					onSubmit={handleSubmit}
+					className={counter == 8 ? "" : "register-form"}
+				>
 					{formComponents(counter)}
 
 					<div className='register-container-btn'>
